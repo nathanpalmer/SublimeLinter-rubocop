@@ -10,10 +10,10 @@
 
 """This module exports the Rubocop plugin class."""
 
-from SublimeLinter.lint import Linter
+from SublimeLinter.lint import RubyLinter
 
 
-class Rubocop(Linter):
+class Rubocop(RubyLinter):
 
     """Provides an interface to rubocop."""
 
@@ -28,4 +28,4 @@ class Rubocop(Linter):
         r'(?P<message>.+)'
     )
     tempfile_suffix = 'rb'
-    config_file = ('--config', '.rubocop.yml')
+    config_file = ('--config', 'config/rubocop.yml')
